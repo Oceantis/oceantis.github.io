@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>支援 · Support — SINGULARC</title>
+<!--
+  SINGULARC 支援頁(中英雙語同頁,繁中在前)—— App Store / Google Play 的「支援 URL」必填欄位。
+  ⚠ 上線前必做:把 oceantis.support@gmail.com 全部換成真的對外 email(本檔共 7 處 —— 用「全部取代」,
+    ⚠ mailto: 連結與顯示文字是兩處,漏一邊會變成連結對、字錯)。
+  ⚠ FAQ 的操作步驟依 v0.43 的實機介面寫成。**改了 UI 就要回來改這一頁** ——
+     一份寫錯步驟的支援頁比沒有支援頁更糟(玩家會照著按,按不到就寫一星評論)。
+  ⚠ 觸控操作那一題:**2026-08-17 使用者拍板=維持單指**(一次一根手指,雙擋板不同時按;
+     sim/ios/main_ios.c:79)。本頁**仍刻意不描述單/雙指細節** —— 拍板附帶重啟條件
+     (真機試玩/上架評價若顯示不受控就翻案),行為還可能變,寫進公開 FAQ 就是承諾。
+     等真機試玩過關、行為凍結後再補一題。
+  頁面自包含:inline CSS、無外部字型/CSS/JS、無追蹤碼、零外連。
+-->
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#040610; --card:#0d1526; --card2:#111c31; --line:#1e2b47;
+  --txt:#e6eefb; --mut:#8fa2c4; --dim:#6b7c9c;
+  --cy:#7dffe0; --ice:#6ee7ff; --gold:#ffd257; --sand:#f2d9a0; --amber:#ff7a30;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+html{scroll-behavior:smooth;scroll-padding-top:18px}
+body{
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,-apple-system,sans-serif;
+  background:
+    radial-gradient(900px 520px at 12% -10%, rgba(125,255,224,.07), transparent 62%),
+    radial-gradient(900px 600px at 100% 4%, rgba(110,231,255,.06), transparent 58%),
+    radial-gradient(700px 460px at 50% 118%, rgba(255,122,48,.05), transparent 62%),
+    var(--bg);
+  color:var(--txt);line-height:1.75;padding:0 18px 64px;min-height:100vh;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:820px;margin:0 auto}
+header{padding:52px 0 8px}
+.brand{font-family:var(--mono);font-size:12px;letter-spacing:.44em;color:var(--cy);
+  text-transform:uppercase;margin-bottom:14px}
+h1{font-size:clamp(26px,5.2vw,40px);line-height:1.2;letter-spacing:-.5px;font-weight:800;
+  background:linear-gradient(100deg,var(--cy),var(--ice) 46%,var(--sand));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.tag{font-size:15.5px;color:var(--mut);margin-top:16px;max-width:640px}
+.langnav{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 30px}
+.langnav a{padding:7px 15px;border-radius:999px;border:1px solid var(--line);color:var(--mut);
+  text-decoration:none;font-size:13.5px;font-weight:700}
+.langnav a:hover{border-color:var(--cy);color:var(--cy)}
+section.doc{background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:26px 24px;margin-bottom:22px}
+h2{font-size:clamp(18px,3.4vw,23px);margin:2px 0 16px;letter-spacing:-.2px;
+  padding-bottom:11px;border-bottom:1px solid var(--line)}
+h3{font-size:15.5px;margin:26px 0 8px;color:var(--cy)}
+h3:first-of-type{margin-top:6px}
+p{margin:9px 0;font-size:15px;color:#dbe5f6}
+ul{margin:9px 0 9px 20px}
+li{margin:6px 0;font-size:15px;color:#dbe5f6}
+b,strong{color:#fff}
+a{color:var(--ice);text-decoration:underline;text-underline-offset:2px;word-break:break-all}
+code{font-family:var(--mono);font-size:.9em;background:#0b142a;border:1px solid var(--line);
+  border-radius:5px;padding:1px 6px;color:var(--cy)}
+.mailbox{background:var(--card2);border:1px solid var(--line);border-left:3px solid var(--cy);
+  border-radius:0 12px 12px 0;padding:16px 18px;margin:18px 0}
+.mailbox .big{font-family:var(--mono);font-size:clamp(15px,3.6vw,19px);font-weight:700}
+.qa{border:1px solid var(--line);border-radius:12px;background:var(--card2);
+  padding:15px 17px;margin:13px 0}
+.qa .q{font-weight:800;font-size:15px;color:var(--gold);margin-bottom:7px}
+.qa .a{font-size:14.6px;color:#dbe5f6}
+.qa .a b{color:var(--cy)}
+.note{border-left:3px solid var(--gold);background:rgba(255,210,87,.055);
+  border-radius:0 10px 10px 0;padding:13px 16px;margin:16px 0;font-size:14px;color:#e8dfc4}
+.note b{color:var(--gold)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 4px}
+.chip{font-size:12.5px;font-family:var(--mono);padding:5px 11px;border-radius:999px;
+  border:1px solid var(--line);color:var(--mut)}
+.chip.c1{border-color:rgba(110,231,255,.5);color:var(--ice)}
+.chip.c2{border-color:rgba(255,122,48,.5);color:var(--amber)}
+.chip.c3{border-color:rgba(159,216,234,.5);color:#9fd8ea}
+hr.sep{border:none;height:1px;background:var(--line);margin:34px 0 26px}
+footer{color:var(--dim);font-size:12.5px;text-align:center;padding:18px 0 0;line-height:1.9}
+footer .mono{font-family:var(--mono)}
+@media(max-width:520px){
+  section.doc{padding:20px 16px}
+  body{padding:0 12px 48px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">SINGULARC</div>
+  <h1>支援 · Support</h1>
+  <p class="tag">
+    一台掉進黑洞的太空彈珠台:三張檯面各有自己的規則,把球送進轉金的蟲洞就能逃出生天。<br>
+    <span style="color:var(--dim)">A space pinball table falling into a black hole — three tables,
+    three sets of rules, one golden wormhole out.</span>
+  </p>
+  <nav class="langnav">
+    <a href="#zh">繁體中文</a>
+    <a href="#en">English</a>
+  </nav>
+</header>
+
+<!-- ══════════════════ 繁體中文 ══════════════════ -->
+<section class="doc" id="zh">
+  <h2>聯絡與常見問題(繁體中文)</h2>
+
+  <h3>怎麼找到我</h3>
+  <div class="mailbox">
+    <div class="big"><a href="mailto:oceantis.support@gmail.com">oceantis.support@gmail.com</a></div>
+    <p style="margin-top:10px;font-size:14.5px">
+      回報 bug、提建議、問問題都寄這裡。<b>信裡請附上這四件事</b>,可以省掉一整輪來回:</p>
+    <ul>
+      <li><b>裝置型號</b>與<b>系統版本</b>(例:iPhone 13 / iOS 18.4)</li>
+      <li><b>你在哪一頁 / 哪一關</b>發生的(例:紅岩星域 R2 風切航道)</li>
+      <li><b>你做了什麼、然後發生了什麼</b>(愈具體愈好)</li>
+      <li>可以的話<b>附一張截圖</b> —— 位置類的問題,一張截圖等於十句話</li>
+    </ul>
+    <p style="font-size:13.6px;color:var(--dim)">
+      這是一個人做的遊戲,回信可能需要幾天,但每一封都會看。</p>
+  </div>
+
+  <h3>常見問題</h3>
+
+  <div class="qa">
+    <div class="q">Q:我的進度不見了 / 換手機後進度沒跟著過來?</div>
+    <div class="a">
+      遊戲進度<b>只存在你的裝置本機</b>(沒有帳號、沒有雲端存檔),所以:
+      <b>刪除應用程式會一併刪掉進度</b>,換裝置也不會自動搬過去。
+      這是刻意的設計 —— 不要帳號才能做到「零個資收集」(見隱私權政策)。
+      ⚠ 目前<b>沒有</b>手動備份或轉移進度的功能。
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Q:怎麼調音量、怎麼靜音?</div>
+    <div class="a">
+      <b>星域選單 → 選一個星域 → 在關卡選擇頁按 SPACE(或點畫面下排的「操作說明」)</b>,
+      該頁最下面一列就是音量:<b>← →</b> 調主音量、按 <b>1</b> 靜音;
+      音量刻度也可以<b>直接點</b>你要的位置。
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Q:怎麼切換中文 / 英文?</div>
+    <div class="a">
+      同一頁(操作說明頁)底列的「<b>2 介面文字</b>」——按 <b>2</b> 在 中文 / English 之間切換,
+      <b>重新啟動遊戲後生效</b>(切了之後那一列會亮黃字提醒你)。<br>
+      第一次玩會依你的系統語言自動挑;之後只聽你自己切的,不會被系統語言改回去。
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Q:玩到一半想離開這一局,要怎麼退出?</div>
+    <div class="a">
+      遊戲中<b>螢幕最右上角</b>(分數那一條的頂端)有一顆「離開」——<b>點兩下才會退</b>:
+      第一下會跳出「再點一次離開本局」,兩秒內再點才真的退出。
+      這樣設計是為了讓誤觸不會毀掉你正在打的一局。<br>
+      退出是<b>一次退一層</b>:遊戲 → 關卡頁 → 星域選單 → 標題。
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Q:抽卡的機率是多少?會不會抽到重複的?</div>
+    <div class="a">
+      抽卡用的是<b>遊戲內免費取得的反物質燃料</b>(打分結算入帳、或看獎勵廣告),
+      <b>不能用真錢買、也不能換成真錢</b> —— 這一款沒有任何付費購買入口。<br>
+      手機版<b>不提供逐件機率表頁面</b>。稀有度分三級(普通 / 進階 / 傳奇),
+      傳奇最稀有;抽到已有的部件會累加數量(部件是消耗品,不是永久裝備)。
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Q:廣告會不會在我打球的時候跳出來?</div>
+    <div class="a">
+      <b>不會。</b>本作<b>沒有橫幅廣告、沒有插頁廣告</b> ——
+      所有廣告都是<b>你自己按了才播</b>的獎勵式廣告(按鈕上會寫明看完給什麼)。
+      中途離開廣告只是拿不到那份獎勵,不會有其他後果。<br>
+      不想看任何廣告也完全玩得下去:所有廣告獎勵都是<b>加分項,不是通關必需品</b>。
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Q:我卡在某一關過不去,是不是壞了?</div>
+    <div class="a">
+      每一關開打前都有一張<b>開場簡報</b>,會把「這一關要打什麼」套上光圈指給你看(點畫面關掉,不佔遊戲時間)。
+      遊戲中<b>右欄</b>也一直寫著當前目標。三張檯的通關鏈是同一條:
+      <b>擊入黑洞充能 → 蟲洞轉金 → 射入蟲洞逃出生天</b>。<br>
+      ⚠ 若蟲洞<b>看起來該轉金卻還是紫色</b>,通常是因為你正在多球中(結算會等多球結束才兌現)。
+      等球數回到一顆再看。若你確定不是這個情況,請寄信給我並附截圖。
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Q:有沒有無盡模式 / 打完關卡之後還有什麼可以玩?</div>
+    <div class="a">
+      有兩個:<b>①「深淵下探」</b>(關卡選擇頁底列)——一直往下潛,每 3 層三選一拿強化,
+      死了就結束、但生涯最深深度永久留在紀錄裡。<b>②星圖循環</b>——破關後續玩,
+      敵人變硬、任務變長、分數係數變高。
+    </div>
+  </div>
+
+  <h3>還沒有的功能(誠實清單)</h3>
+  <p>以下是<b>目前確定沒有</b>的東西,寫在這裡免得你去找:</p>
+  <ul>
+    <li>雲端存檔 / 帳號 / 跨裝置同步 —— 沒有,而且短期不會有(見隱私權政策)。</li>
+    <li>線上排行榜 / 對戰 / 好友 / 聊天 —— 沒有,本作完全單機。</li>
+    <li>應用程式內購買 —— 沒有。遊戲內貨幣不販售、不可兌現。</li>
+    <li>手動備份或轉移進度 —— 沒有。</li>
+  </ul>
+</section>
+
+<!-- ══════════════════ English ══════════════════ -->
+<section class="doc" id="en">
+  <h2>Contact &amp; FAQ (English)</h2>
+
+  <h3>How to reach me</h3>
+  <div class="mailbox">
+    <div class="big"><a href="mailto:oceantis.support@gmail.com">oceantis.support@gmail.com</a></div>
+    <p style="margin-top:10px;font-size:14.5px">
+      Bug reports, suggestions and questions all go here. <b>Please include these four things</b> —
+      it saves a whole round trip:</p>
+    <ul>
+      <li><b>Device model</b> and <b>OS version</b> (e.g. iPhone 13 / iOS 18.4)</li>
+      <li><b>Which screen or level</b> it happened on (e.g. Red Rock R2, Wind Shear Run)</li>
+      <li><b>What you did, and what happened next</b> — the more specific the better</li>
+      <li>A <b>screenshot</b> if you can. For anything positional, one screenshot beats ten sentences.</li>
+    </ul>
+    <p style="font-size:13.6px;color:var(--dim)">
+      This is a one-person game, so a reply may take a few days — but every message is read.</p>
+  </div>
+
+  <h3>FAQ</h3>
+
+  <div class="qa">
+    <div class="q">Q: My progress is gone / it didn't follow me to a new phone.</div>
+    <div class="a">
+      Progress is stored <b>only on your device</b> — there are no accounts and no cloud saves.
+      So <b>deleting the app deletes your progress</b>, and switching devices does not carry it over.
+      That is deliberate: having no account is what makes "collects no personal data" true
+      (see the Privacy Policy). ⚠ There is currently <b>no</b> manual backup or transfer feature.
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Q: How do I change the volume or mute the game?</div>
+    <div class="a">
+      <b>Star map → pick a region → on the level select screen press SPACE</b>
+      (or tap "Controls" on the bottom row). The bottom line of that page is the volume:
+      <b>← →</b> adjusts master volume, <b>1</b> mutes. You can also <b>tap the meter</b> directly.
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Q: How do I switch between English and Chinese?</div>
+    <div class="a">
+      On that same Controls page, the bottom row has "<b>2 Language</b>" — press <b>2</b> to switch
+      between 中文 and English. <b>It takes effect after you restart the game</b>
+      (the row turns yellow to remind you).<br>
+      On a first run the game picks a language from your system settings; after that it only follows
+      your own choice.
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Q: How do I quit a run in progress?</div>
+    <div class="a">
+      During play there is an exit control in the <b>top-right corner</b> of the screen
+      (at the top of the score column). <b>You must tap it twice</b>: the first tap shows
+      "tap again to leave this run", and only a second tap within two seconds actually exits.
+      That way a stray touch cannot destroy the ball you are playing.<br>
+      Exiting goes <b>one layer at a time</b>: game → level select → star map → title.
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Q: What are the gacha odds? Are they disclosed?</div>
+    <div class="a">
+      <b>Fully disclosed, in-game</b>: from the star map press SPACE to open the <b>Loadout Bay</b>,
+      then press <b>ENTER</b> for the odds table — <b>all 12 parts listed individually</b> with their
+      percentages, plus the raw weights so you can check the arithmetic.<br>
+      ⚠ Those numbers are <b>computed at runtime from the same weight table the draw itself reads</b>,
+      not typed in by hand, so the displayed odds can never drift from the real ones.<br>
+      Draws cost <b>antimatter fuel, which is only ever earned in-game</b> (from scoring, or by
+      watching a rewarded ad). It <b>cannot be bought with real money and cannot be cashed out</b>.
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Q: Will ads interrupt me mid-ball?</div>
+    <div class="a">
+      <b>No.</b> There are <b>no banners and no interstitials</b>. Every ad is a rewarded ad that
+      <b>only plays when you tap it</b>, and the button always states the reward up front.
+      Leaving an ad early just means no reward.<br>
+      You can also ignore ads entirely: every ad reward is a <b>bonus, never a requirement</b>
+      for finishing a level.
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Q: I'm stuck on a level — is it broken?</div>
+    <div class="a">
+      Every level opens with a <b>briefing</b> that rings the targets you need to hit
+      (tap to dismiss; it does not eat your play time). The <b>right-hand column</b> also shows the
+      current objective at all times. All three tables share one escape chain:
+      <b>charge the black hole → the wormhole turns gold → shoot it to escape</b>.<br>
+      ⚠ If the wormhole <b>looks like it should be gold but is still violet</b>, you are usually in
+      multiball — the clear is held until multiball ends. Wait until you are down to one ball.
+      If that isn't it, email me with a screenshot.
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">Q: Is there an endless mode? Anything after the campaign?</div>
+    <div class="a">
+      Two things: <b>(1) Abyss Dive</b> (bottom row of level select) — descend as far as you can,
+      pick one of three upgrades every 3 layers, and when you're out of balls the run ends but your
+      deepest depth is kept forever. <b>(2) Star-map loops</b> — keep playing after the campaign with
+      tougher enemies, longer missions and a higher score multiplier.
+    </div>
+  </div>
+
+  <h3>What this game does not have (honest list)</h3>
+  <ul>
+    <li>Cloud saves / accounts / cross-device sync — no, and not planned (see Privacy Policy).</li>
+    <li>Online leaderboards / multiplayer / friends / chat — no, fully single-player and offline.</li>
+    <li>In-app purchases — none. In-game currency is not sold and cannot be cashed out.</li>
+    <li>Manual save backup or transfer — no.</li>
+  </ul>
+</section>
+
+<footer>
+  <span class="mono">SINGULARC · ARTEMIS · LAST CALL</span><br>
+  支援信箱 / Support: <a href="mailto:oceantis.support@gmail.com">oceantis.support@gmail.com</a><br>
+  本頁無追蹤、無 Cookie、無外部資源載入。This page tracks nothing.
+</footer>
+
+</div>
+</body>
+</html>

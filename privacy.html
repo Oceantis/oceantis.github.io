@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>隱私權政策 · Privacy Policy — SINGULARC</title>
+<!--
+  SINGULARC 隱私權政策(中英雙語同頁,繁中在前)
+  ⚠ 上線前必做三件事:
+    ① 把 oceantis.support@gmail.com 全部換成真的對外 email(本檔共 13 處 —— 用編輯器的「全部取代」,
+       ⚠ 別手動找:mailto: 連結與顯示文字是兩處,漏一邊會變成連結對、字錯)
+    ② 把 Oceantis (LO HUNG CHIN) 全部換成要公開的開發者/工作室名稱(本檔共 4 處)
+    ③ 把「最後更新 / Last updated」的日期改成實際上線日
+  事實基礎正本 = docs/pinball/PINBALL_COMPLIANCE.md §4.2(接 AdMob 版)。⛔ 不要在這裡自己發明新的資料項目。
+  §附錄「Apple App Privacy 標籤對照」是給送審填表用的,不想公開可整段刪掉 <section id="labels">。
+  頁面自包含:inline CSS、無外部字型/CSS/JS、無追蹤碼。唯一的外連是 Google 隱私權政策(法規要求指向)。
+-->
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#040610; --bg2:#0a1026; --card:#0d1526; --card2:#111c31; --line:#1e2b47;
+  --txt:#e6eefb; --mut:#8fa2c4; --dim:#6b7c9c;
+  --cy:#7dffe0; --ice:#6ee7ff; --gold:#ffd257; --sand:#f2d9a0;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+html{scroll-behavior:smooth;scroll-padding-top:18px}
+body{
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,-apple-system,sans-serif;
+  background:
+    radial-gradient(900px 520px at 12% -10%, rgba(125,255,224,.07), transparent 62%),
+    radial-gradient(900px 600px at 100% 4%, rgba(110,231,255,.06), transparent 58%),
+    radial-gradient(700px 460px at 50% 118%, rgba(255,210,87,.045), transparent 62%),
+    var(--bg);
+  color:var(--txt);line-height:1.75;padding:0 18px 64px;min-height:100vh;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:820px;margin:0 auto}
+header{padding:52px 0 8px}
+.brand{font-family:var(--mono);font-size:12px;letter-spacing:.44em;color:var(--cy);
+  text-transform:uppercase;margin-bottom:14px}
+h1{font-size:clamp(26px,5.2vw,40px);line-height:1.2;letter-spacing:-.5px;font-weight:800;
+  background:linear-gradient(100deg,var(--cy),var(--ice) 46%,var(--sand));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.upd{font-family:var(--mono);font-size:12.5px;color:var(--dim);margin-top:14px}
+.langnav{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 30px}
+.langnav a{padding:7px 15px;border-radius:999px;border:1px solid var(--line);color:var(--mut);
+  text-decoration:none;font-size:13.5px;font-weight:700}
+.langnav a:hover{border-color:var(--cy);color:var(--cy)}
+section.doc{background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:26px 24px;margin-bottom:22px}
+h2{font-size:clamp(18px,3.4vw,23px);margin:2px 0 16px;letter-spacing:-.2px;
+  padding-bottom:11px;border-bottom:1px solid var(--line)}
+h3{font-size:15.5px;margin:24px 0 8px;color:var(--cy);letter-spacing:.2px}
+h3:first-of-type{margin-top:6px}
+h4{font-size:14.5px;margin:16px 0 6px;color:var(--sand)}
+p{margin:9px 0;font-size:15px;color:#dbe5f6}
+ul{margin:9px 0 9px 20px}
+li{margin:6px 0;font-size:15px;color:#dbe5f6}
+b,strong{color:#fff}
+a{color:var(--ice);text-decoration:underline;text-underline-offset:2px;word-break:break-all}
+code{font-family:var(--mono);font-size:.9em;background:#0b142a;border:1px solid var(--line);
+  border-radius:5px;padding:1px 6px;color:var(--cy);word-break:break-all}
+.tbl{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:13.8px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--card2);color:var(--cy);font-weight:700;white-space:nowrap;font-size:13px}
+tr:last-child td{border-bottom:none}
+td.no{color:var(--dim)}
+td.yes{color:var(--gold)}
+.note{border-left:3px solid var(--gold);background:rgba(255,210,87,.055);
+  border-radius:0 10px 10px 0;padding:13px 16px;margin:16px 0;font-size:14px;color:#e8dfc4}
+.note b{color:var(--gold)}
+.key{border-left:3px solid var(--cy);background:rgba(125,255,224,.05);
+  border-radius:0 10px 10px 0;padding:13px 16px;margin:16px 0;font-size:14.5px}
+hr.sep{border:none;height:1px;background:var(--line);margin:34px 0 26px}
+footer{color:var(--dim);font-size:12.5px;text-align:center;padding:18px 0 0;line-height:1.9}
+footer .mono{font-family:var(--mono)}
+@media(max-width:520px){
+  section.doc{padding:20px 16px}
+  body{padding:0 12px 48px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">SINGULARC</div>
+  <h1>隱私權政策<br>Privacy Policy</h1>
+  <div class="upd">最後更新 / Last updated: <b>2026-09-05</b></div>
+  <nav class="langnav">
+    <a href="#zh">繁體中文</a>
+    <a href="#en">English</a>
+  </nav>
+</header>
+
+<!-- ══════════════════ 繁體中文 ══════════════════ -->
+<section class="doc" id="zh">
+  <h2>隱私權政策(繁體中文)</h2>
+
+  <div class="key">
+    <b>一句話:</b>SINGULARC 是一款單機遊戲。<b>遊戲本身不連網、不需要帳號、不收集任何個人資料</b>,
+    你的進度只存在你自己的裝置上。唯一會處理資料的是<b>顯示獎勵式廣告的 Google AdMob</b>,
+    而那些廣告<b>永遠要你主動點才會播</b>。
+  </div>
+
+  <h3>1. 我們是誰</h3>
+  <p>本應用程式「SINGULARC」由 <b>Oceantis (LO HUNG CHIN)</b> 開發與發行。
+     隱私相關問題請聯絡:<a href="mailto:oceantis.support@gmail.com">oceantis.support@gmail.com</a></p>
+
+  <h3>2. 我們收集哪些資料</h3>
+
+  <h4>2.1 遊戲本體:不收集</h4>
+  <p>遊戲程式<b>不含任何網路連線功能</b>,也沒有帳號、登入、雲端存檔、排行榜或社群功能。
+     我們<b>不會</b>收集、傳輸或儲存你的任何個人資料。</p>
+  <p>你的遊戲進度(分數、生涯紀錄、反物質燃料、倉庫與出擊配置、音量與語言設定)
+     以純文字檔<b>只儲存在你的裝置本機</b>,不會上傳到任何伺服器,我們也讀不到它。</p>
+
+  <h4>2.2 遊戲內的統計數字:純本機</h4>
+  <p>遊戲內若顯示任何次數統計(例如你看過幾次廣告、開過幾個寶箱),那些數字
+     <b>只是本機存檔裡的計數器</b>,用來驅動遊戲規則,<b>不會傳送到任何地方</b>,
+     也不會與任何識別碼關聯。</p>
+
+  <h4>2.3 唯一的第三方:Google AdMob(廣告)</h4>
+  <p>本應用使用 <b>Google AdMob</b> 顯示<b>獎勵式廣告(rewarded ads)</b>。
+     這些廣告的特性是:</p>
+  <ul>
+    <li><b>全部由你主動觸發</b> —— 一定是你自己按了畫面上寫明獎勵的按鈕才會播。</li>
+    <li><b>沒有橫幅廣告、沒有插頁廣告</b>,不會在你打球的中途跳出來打斷你。</li>
+    <li>中途離開廣告 = 不會拿到獎勵,但也不會有任何其他後果。</li>
+  </ul>
+  <p>為了投放廣告,Google AdMob 可能收集與處理下列資料:</p>
+  <div class="tbl"><table>
+    <tr><th>資料</th><th>用途</th></tr>
+    <tr><td>廣告識別碼(iOS 的 IDFA / Android 的廣告 ID)</td><td>廣告投放、頻率控管、成效衡量</td></tr>
+    <tr><td>裝置與系統資訊(機型、作業系統版本、語言、國別等)</td><td>廣告投放、相容性</td></tr>
+    <tr><td>由 IP 位址推得的<b>粗略</b>位置(國家/地區層級)</td><td>廣告投放、詐欺防治</td></tr>
+    <tr><td>廣告互動事件(曝光、觀看完成、點擊)</td><td>成效衡量、計費</td></tr>
+  </table></div>
+  <div class="note">
+    <b>⚠ 請注意:</b>上述資料是<b>由 Google 直接收集與處理</b>,依照
+    <a href="https://policies.google.com/privacy">Google 隱私權政策</a> 與
+    <a href="https://policies.google.com/technologies/ads">Google 廣告技術政策</a> 辦理。
+    <b>我們本身不會取得、不會儲存、也不會轉售這些資料</b>,我們只看得到 Google 後台的匯總統計
+    (例如「今天總共播了幾支廣告」),那些數字無法對應到任何個別使用者。
+  </div>
+
+  <h3>3. 我們不會做的事</h3>
+  <ul>
+    <li><b>不</b>收集姓名、email、電話、通訊錄、行事曆、照片、檔案、麥克風、相機、
+        精確位置、健康或財務資料。</li>
+    <li><b>不</b>要求你註冊帳號,也<b>沒有</b>帳號可以註冊。</li>
+    <li><b>不</b>販售或出租你的資料。</li>
+    <li><b>不</b>做應用程式內購買(IAP)。遊戲內的貨幣<b>不能</b>用真錢購買,也<b>不能</b>兌換成真錢。</li>
+    <li><b>不</b>屬於兒童類目(Kids Category),<b>不</b>針對兒童投放廣告。</li>
+    <li><b>不</b>使用任何自建的分析或追蹤 SDK。</li>
+  </ul>
+
+  <h3>4. 你的選擇與控制權</h3>
+  <ul>
+    <li><b>iOS 追蹤:</b>首次啟動時若出現「允許追蹤」的系統詢問,選<b>不允許</b>即可;
+        之後也可在「設定 → 隱私權與安全性 → 追蹤」隨時關閉。
+        關閉後<b>廣告照樣能看、獎勵照樣拿得到</b>,只是廣告的個人化程度降低。</li>
+    <li><b>Android:</b>可在「設定 → Google → 廣告」重設或刪除廣告 ID。</li>
+    <li><b>歐盟 / 英國:</b>首次啟動會出現同意聲明,你可以選擇<b>不同意</b>個人化廣告,
+        遊戲的任何功能都不會因此被鎖住。</li>
+    <li><b>刪除全部資料:</b>刪除本應用程式,即會一併刪除所有本機儲存的遊戲資料。
+        由於我們手上沒有你的資料,<b>不需要(也無法)向我們提出刪除請求</b>。</li>
+  </ul>
+
+  <h3>5. 兒童隱私</h3>
+  <p>本應用<b>不針對 13 歲以下兒童設計</b>,也不會在知情的情況下收集其個人資料。
+     本應用未申請兒童類目,並已在廣告後台將廣告內容分級設定為不高於本應用的年齡分級。
+     若你認為有兒童的資料被誤收,請來信 <a href="mailto:oceantis.support@gmail.com">oceantis.support@gmail.com</a>。</p>
+
+  <h3>6. 資料保存與安全</h3>
+  <p>我們不持有你的任何資料,因此沒有保存期限可言。本機存檔的安全性由你的裝置本身
+     (作業系統的沙箱機制)保護。Google AdMob 端的保存期限依 Google 自己的政策辦理。</p>
+
+  <h3>7. 政策變更</h3>
+  <p>本政策若有變更,會更新本頁最上方的「最後更新」日期。若變更涉及資料收集方式的實質改變
+     (例如未來新增應用程式內購買或其他第三方 SDK),我們會在遊戲內或商店頁的更新說明中告知。</p>
+
+  <h3>8. 聯絡我們</h3>
+  <p><a href="mailto:oceantis.support@gmail.com">oceantis.support@gmail.com</a></p>
+</section>
+
+<!-- ══════════════════ English ══════════════════ -->
+<section class="doc" id="en">
+  <h2>Privacy Policy (English)</h2>
+
+  <div class="key">
+    <b>In one sentence:</b> SINGULARC is an offline single-player game.
+    <b>The game itself has no network code, no accounts, and collects no personal data</b> —
+    your progress lives only on your own device. The only party that processes any data is
+    <b>Google AdMob, which serves the rewarded ads</b>, and those ads
+    <b>only ever play when you choose to watch one</b>.
+  </div>
+
+  <h3>1. Who we are</h3>
+  <p>SINGULARC is developed and published by <b>Oceantis (LO HUNG CHIN)</b>.
+     For privacy enquiries: <a href="mailto:oceantis.support@gmail.com">oceantis.support@gmail.com</a></p>
+
+  <h3>2. What data we collect</h3>
+
+  <h4>2.1 The game itself: none</h4>
+  <p>The game contains <b>no networking code</b> and has no accounts, sign-in, cloud saves,
+     leaderboards or social features. We do <b>not</b> collect, transmit or store any personal data.</p>
+  <p>Your progress (scores, career records, antimatter fuel, inventory and loadout, volume and
+     language settings) is written to a plain-text file <b>stored only on your device</b>.
+     It is never uploaded anywhere, and we cannot read it.</p>
+
+  <h4>2.2 In-game counters: local only</h4>
+  <p>Any counters shown in-game (for example how many ads you have watched, or how many chests you
+     have opened) are <b>local save-file counters</b> that drive game rules.
+     They are never transmitted anywhere and are not linked to any identifier.</p>
+
+  <h4>2.3 The only third party: Google AdMob (advertising)</h4>
+  <p>This app uses <b>Google AdMob</b> to serve <b>rewarded ads</b>. Specifically:</p>
+  <ul>
+    <li><b>Every ad is opt-in</b> — one only plays after you tap a button that states the reward.</li>
+    <li><b>No banner ads and no interstitials</b>; nothing interrupts you mid-ball.</li>
+    <li>Leaving an ad early simply means no reward. There is no other consequence.</li>
+  </ul>
+  <p>To serve those ads, Google AdMob may collect and process:</p>
+  <div class="tbl"><table>
+    <tr><th>Data</th><th>Purpose</th></tr>
+    <tr><td>Advertising identifier (IDFA on iOS / Advertising ID on Android)</td><td>Ad delivery, frequency capping, measurement</td></tr>
+    <tr><td>Device and system information (model, OS version, language, country)</td><td>Ad delivery, compatibility</td></tr>
+    <tr><td><b>Coarse</b> location inferred from IP address (country/region level)</td><td>Ad delivery, fraud prevention</td></tr>
+    <tr><td>Ad interaction events (impression, completed view, click)</td><td>Measurement, billing</td></tr>
+  </table></div>
+  <div class="note">
+    <b>⚠ Please note:</b> the data above is <b>collected and processed directly by Google</b>
+    under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and
+    <a href="https://policies.google.com/technologies/ads">Google Advertising Technologies</a>.
+    <b>We never receive, store or resell it.</b> We only see aggregate figures in the AdMob
+    dashboard (such as total ads served today), which cannot be traced to any individual user.
+  </div>
+
+  <h3>3. What we never do</h3>
+  <ul>
+    <li>We do <b>not</b> collect your name, email, phone number, contacts, calendar, photos, files,
+        microphone, camera, precise location, health or financial data.</li>
+    <li>We do <b>not</b> ask you to register an account — there is no account system at all.</li>
+    <li>We do <b>not</b> sell or rent your data.</li>
+    <li>We have <b>no in-app purchases</b>. In-game currency <b>cannot</b> be bought with real money
+        and <b>cannot</b> be cashed out.</li>
+    <li>This app is <b>not</b> in the Kids Category and does <b>not</b> target advertising at children.</li>
+    <li>We use <b>no</b> first-party analytics or tracking SDK.</li>
+  </ul>
+
+  <h3>4. Your choices</h3>
+  <ul>
+    <li><b>iOS tracking:</b> if the system asks you to allow tracking, choosing
+        <b>Ask App Not to Track</b> is fine; you can also change it later under
+        Settings → Privacy &amp; Security → Tracking. Ads still work and rewards are still granted —
+        only ad personalisation is reduced.</li>
+    <li><b>Android:</b> you can reset or delete your Advertising ID under Settings → Google → Ads.</li>
+    <li><b>EU / UK:</b> a consent notice appears on first launch. You may <b>decline</b>
+        personalised advertising; no game feature is locked behind that choice.</li>
+    <li><b>Deleting everything:</b> deleting the app deletes all locally stored game data.
+        Because we hold no data about you, there is no deletion request to send us
+        (and none we could act on).</li>
+  </ul>
+
+  <h3>5. Children's privacy</h3>
+  <p>This app is <b>not designed for children under 13</b> and we do not knowingly collect their
+     personal data. The app is not in the Kids Category, and the maximum ad content rating in our
+     ad dashboard is configured no higher than the app's own age rating. If you believe a child's
+     data has been collected in error, contact <a href="mailto:oceantis.support@gmail.com">oceantis.support@gmail.com</a>.</p>
+
+  <h3>6. Retention and security</h3>
+  <p>We hold none of your data, so no retention period applies on our side. Your local save file is
+     protected by your device's own operating-system sandbox. Retention on Google's side is governed
+     by Google's own policies.</p>
+
+  <h3>7. Changes to this policy</h3>
+  <p>If this policy changes, the "Last updated" date at the top of this page will change. If a change
+     materially affects data collection (for example adding in-app purchases or another third-party
+     SDK), we will say so in the in-game or store release notes.</p>
+
+  <h3>8. Contact</h3>
+  <p><a href="mailto:oceantis.support@gmail.com">oceantis.support@gmail.com</a></p>
+</section>
+
+<hr class="sep">
+
+<!-- ══════════════════ 送審用附錄(可刪)══════════════════ -->
+<section class="doc" id="labels">
+  <h2>附錄:Apple「App Privacy」標籤怎麼填</h2>
+  <div class="note">
+    <b>⚠ 這一節是給開發者送審填表用的對照表,對玩家沒有意義。</b>
+    不想公開的話,把整個 <code>&lt;section id="labels"&gt;</code> 刪掉即可,前面兩節是完整的政策本文。
+    事實基礎正本 = <code>docs/pinball/PINBALL_COMPLIANCE.md</code> §4.2。
+    ⚠ 送審當下請以 App Store Connect 問卷的即時選項為準,<b>不要照抄本表的欄位名稱</b>(蘋果會改)。
+  </div>
+
+  <h3>A. 含廣告版(AdMob;走 iOS 免費+廣告路線 = 現行出貨路線)</h3>
+  <p>在 App Store Connect 的 App Privacy 中,<b>要勾「Data Collected」</b>,逐項如下。
+     ⚠ 三個欄位的意思不一樣,別混:<b>「用於追蹤」</b>= 與第三方資料串接做跨 App 廣告;
+     <b>「與身分連結」</b>= 與使用者身分/帳號綁定;<b>「用途」</b>= 拿去做什麼。</p>
+  <div class="tbl"><table>
+    <tr><th>資料類別</th><th>收集?</th><th>用途</th><th>與身分連結?</th><th>用於追蹤?</th></tr>
+    <tr><td><b>Identifiers</b> → Device ID(IDFA)</td><td class="yes">是(AdMob)</td>
+        <td>第三方廣告</td><td class="no">否</td><td class="yes">是</td></tr>
+    <tr><td><b>Usage Data</b> → Advertising Data(廣告曝光/點擊)</td><td class="yes">是(AdMob)</td>
+        <td>第三方廣告</td><td class="no">否</td><td class="yes">是</td></tr>
+    <tr><td><b>Usage Data</b> → Product Interaction(廣告觀看完成事件)</td><td class="yes">是(AdMob)</td>
+        <td>第三方廣告 · 分析</td><td class="no">否</td><td class="yes">是</td></tr>
+    <tr><td><b>Location</b> → Coarse Location(由 IP 推得)</td><td class="yes">是(AdMob)</td>
+        <td>第三方廣告 · 詐欺防治</td><td class="no">否</td><td class="yes">是</td></tr>
+    <tr><td>Diagnostics / Crash Data</td><td class="no">⚠ 看你有沒有裝 Crashlytics —— <b>沒裝就答「否」</b></td>
+        <td>App 功能</td><td class="no">否</td><td class="no">否</td></tr>
+    <tr><td>Contact Info / User Content / Contacts / Photos / Health / Financial / Browsing History</td>
+        <td class="no">否</td><td>—</td><td class="no">—</td><td class="no">—</td></tr>
+    <tr><td>Identifiers → User ID</td><td class="no">否(沒有帳號系統)</td><td>—</td><td class="no">—</td><td class="no">—</td></tr>
+    <tr><td>遊戲進度(分數/燃料/倉庫)</td>
+        <td class="no">否 —— <b>只存本機、不上傳的資料不算「收集」</b></td><td>—</td><td class="no">—</td><td class="no">—</td></tr>
+  </table></div>
+  <div class="note">
+    <b>⚠ 連帶三件事,漏一件會被退或被罰:</b>
+    ① 勾了「用於追蹤」就<b>必須</b>實作 ATT(App Tracking Transparency)授權請求;
+    ② 歐盟/英國<b>必須</b>接 Google UMP 同意流程;
+    ③ <b>必須</b>交 <code>PrivacyInfo.xcprivacy</code>(即使資料全不收也要交 ——
+    SDL2 用 <code>mach_absolute_time</code>,屬 required reason API <b>35F9.1</b>;
+    AdMob SDK 自己那份 privacy manifest 由 Google 隨 SDK 提供)。
+  </div>
+
+  <h3>B. 無廣告版(PC / Mac 單品包,或未來的買斷制手機版)</h3>
+  <p>全部答 <b>Data Not Collected</b>。可直接寫進送審備註的證據句:</p>
+  <p><i>「本應用完全離線執行,不含任何網路程式碼。原始碼中 socket / connect / http / curl /
+     NSURLSession 全部零命中;唯一的持久化是本機純文字檔(高分與玩家檔案),不離開裝置。」</i></p>
+  <div class="note">
+    ⚠ <b>這句話要在送審當下重新驗一次</b>,不要引用過時斷言。驗法(在 repo 根目錄):
+    <code>grep -rniE 'socket|connect\(|http[s]?://|curl|NSURLSession|CFNetwork' ui_7inch/ui_pinball.c ui_7inch/ui_pinball_synth.c sim/main_pinball.c</code>
+    <br>⚠ 即使全答 Data Not Collected,<code>PrivacyInfo.xcprivacy</code> <b>仍然要交</b>。
+  </div>
+</section>
+
+<footer>
+  <span class="mono">SINGULARC · ARTEMIS · LAST CALL</span><br>
+  © Oceantis (LO HUNG CHIN). 本頁無追蹤、無 Cookie、無外部資源載入。<br>
+  This page sets no cookies, loads no external resources, and tracks nothing.
+</footer>
+
+</div>
+</body>
+</html>
